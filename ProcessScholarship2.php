@@ -36,10 +36,30 @@
             return $retval;
         }
         
+        function redisplayForm($firstName, $lastName) {
+            // This function displays the form again underneath the error messages when the input data is incorrect.
+        ?>
+        
+        
+        <h2 style="text-align: center">Scholarship Form 2</h2>
+<!--        The php file ProcessScholarship2.php is scripted to this HTML file-->
+        <form name="scholarship" action="ProcessScholarship2.php" method="post">
+            <p>First name: <input type="text" name="fName" value="<?php echo $firstName;?>"></p>
+            <p>Last name: <input type="text" name="lName" value="<?php echo $lastName;?>"></p>
+            <p>
+                <input type="reset" value="Clear Form">&nbsp;&nbsp;
+                <input type="submit" value="Send Form">
+            </p>
+        </form>
+        
+        
+        <?php
+        }
         $firstName = validateInput($_POST['fName'], "First Name");
         $lastName = validateInput($_POST['lName'], "Last Name");
         if ($errorCount > 0) {
-            echo "$errorCount error(s): Please use the \"Back\" button to re-enter the data.<br>\n";
+            echo "$errorCount error(s): Please re-enter the information below.<br>\n";
+            redisplayForm($firstName, $lastName);
         } else {
             echo "Thank you for filling out the scholarship form, " . $firstName . " " . $lastName . ".";
         }
