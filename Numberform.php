@@ -21,7 +21,9 @@
             // if the data is numeric then the extra form will not re-appear for the user to re-enter the information correctly
             if (is_numeric($number)) {
                 $displayForm = false;
-            } else {
+            } 
+            // This will re-appear the form again for the user to fix the indicated errors. 
+            else {
                 echo "<p>You need to enter a numeric value.</p>\n";
                 $displayForm = true;
             }
@@ -29,7 +31,8 @@
         if ($displayForm) {
             ?>
             <form name="numberForm" action="Numberform.php" method="post">
-                <p>
+                                                        <!--(echo) $number displays the number they inputed into the field-->
+                <p>  
                     Enter a number: <input type="text" name="number" value="<?php echo $number; ?>">
                 </p>
                 <p>
@@ -38,8 +41,10 @@
                 </p>
             </form>
             <?php
+            // this indicates to the user that their data is correct and also provides a link to press to try again if they wish
         } else {
             echo "<p>Thank you for entering a number.</p>\n";
+            // this echo is squaring (doubling) the number that is inputed into the field by the user
             echo "<p>Your number, $number, squared is " . ($number * $number) . ".</p>\n";
             echo "<p><a href= \"Numberform.php\">Try again?</a></p>\n";
         }
