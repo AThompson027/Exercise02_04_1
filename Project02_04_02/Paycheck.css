@@ -1,6 +1,8 @@
+/*Makes the background aquamarine*/
 html {
     background-color: aquamarine;
 }
+/*Make the form of the html have a white background, have a height, padding on the top, text-align, width, margin to the left. border-radius, and a bodder style (which is dotted)*/
 form {
    background-color: white;
    height: 150px;
@@ -12,15 +14,18 @@ form {
    border-style: dotted;
  }
 
+/*This makes the input fields for the user to enter information have the light blue background*/
 input#wage, #hours {
   background-color: rgb(229,255,246);
 }
 
+/*The paragraph has a font that is called monospace and have a font size pf 1.5em*/
  p {
    font-family: monospace;
    font-size: 1.5em;
  }
 
+/*The heading on the top of the page have a monospace font, is bolded, font size of 3em, and also has a text shadow that is white*/
 h2 {
   font-family: monospace;
   font-style: bold;
