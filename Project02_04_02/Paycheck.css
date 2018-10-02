@@ -1,3 +1,29 @@
 html {
     background-color: aquamarine;
 }
+form {
+   background-color: white;
+   height: 150px;
+   padding-top: 40px;
+   text-align: center;
+   width: 500px;
+   margin-left: 30%;
+   border-radius: 10px;
+   border-style: dotted;
+ }
+
+input#wage, #hours {
+  background-color: rgb(229,255,246);
+}
+
+ p {
+   font-family: monospace;
+   font-size: 1.5em;
+ }
+
+h2 {
+  font-family: monospace;
+  font-style: bold;
+  font-size: 3em;
+  text-shadow: 2px 2px white;
+}
